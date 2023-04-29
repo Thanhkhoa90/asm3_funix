@@ -1,5 +1,4 @@
 let title = document.querySelector("h1");
-console.log(Document.URL);
 
 if (document.location.href.includes("project-pets")) {
   title.innerHTML = "Project Chapter - PETS WEB";
