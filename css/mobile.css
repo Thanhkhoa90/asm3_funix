@@ -1,0 +1,8 @@
+@media screen and (max-width: 576px) {
+  nav {
+    justify-content: flex-start !important;
+  }
+  #certificate .col {
+    border-bottom: 0.25rem solid pink;
+  }
+}
