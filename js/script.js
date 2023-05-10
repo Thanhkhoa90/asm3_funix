@@ -1,7 +1,6 @@
 function handleSubmit() {
   // lay gia tri input cua email va chuyen sang in thuong
   const emailValue = document.getElementById("email").value.toLocaleLowerCase();
-  console.log("email la", emailValue);
   // lay element cua the p hien thi loi
   const errorEmail = document.getElementById("error-email");
   // Dieu kien de la mot email
@@ -13,9 +12,9 @@ function handleSubmit() {
   const sectionContent = document.querySelector(
     "#personal-info .section-content"
   );
-  console.log("check section", sectionContent);
   //lay element de kiem soat submit
   const submitControl = document.querySelector(".submit-email");
+  //Kiem tra dieu kien checkMail
   if (checkMail) {
     sectionContent.style.display = "block";
     submitControl.style.display = "none";
@@ -26,17 +25,20 @@ function handleSubmit() {
 }
 function handleOnMouseOver(element) {
   const viewMore = element.querySelector(".control-view");
-  viewMore.style.display = "block";
+  viewMore.style.display = "block"; //Hiện button View more
 }
 function handleOnMouseOut(element) {
   const viewMore = element.querySelector(".control-view");
   if (!viewMore.classList.value.includes("less-more")) {
-    viewMore.style.display = "none";
+    viewMore.style.display = "none"; //Ẩn button View more
   }
 }
 function handleViewMore(element) {
+  // Lay element cha gần nhất
   const parentElement = element.closest(".parent");
+  // Lay element button
   const viewMore = parentElement.querySelector(".control-view");
+  // Lay tat ca elments ".section-content"
   const sectionContent = parentElement.querySelectorAll(".section-content");
   if (viewMore.classList.value.includes("view-more")) {
     sectionContent.forEach((element) => {
